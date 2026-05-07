@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trusted Loan Leads for Financial Companies | The Primeinfotech</title>
+  <meta name="description" content="The Primeinfotech connects lenders with verified loan seekers across the USA and Canada, delivering quality leads from homebuyers, refinancers, and property buyers." />
+  <meta name="keywords" content="loan leads, home financing, refinance leads" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0A1628',
+            accent: '#1E6FFF',
+            gold: '#C8952A',
+            lightbg: '#F5F7FA',
+          },
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    html { scroll-behavior: smooth; }
+
+    /* Fade-up animation */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Card hover lift */
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    /* Active nav link */
+    .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #C8952A;
+      transition: width 0.3s ease;
+    }
+    .nav-link.active {
+      color: #C8952A;
+    }
+    .nav-link.active::after {
+      width: 100%;
+    }
+    .nav-link:hover {
+      color: #C8952A;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* Gold gradient button */
+    .btn-gold {
+      background: linear-gradient(135deg, #C8952A, #e8b04a);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(200,149,42,0.4);
+    }
+
+    /* Outline button */
+    .btn-outline {
+      border: 2px solid #fff;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .btn-outline:hover {
+      background: #fff;
+      color: #0A1628;
+    }
+
+    /* Navbar scroll shadow */
+    .navbar-scrolled {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    /* FAQ accordion */
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+    .faq-content.open {
+      max-height: 200px;
+    }
+
+    /* Hero overlay */
+    .hero-overlay {
+      background: linear-gradient(135deg, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.75) 50%, rgba(30,111,255,0.2) 100%);
+    }
+
+    /* Section divider */
+    .section-badge {
+      display: inline-block;
+      background: rgba(200,149,42,0.15);
+      color: #C8952A;
+      border: 1px solid rgba(200,149,42,0.3);
+      border-radius: 999px;
+      padding: 4px 16px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    /* Smooth image load */
+    img {
+      transition: opacity 0.3s ease;
+    }
+
+    /* Mobile menu */
+    #mobile-menu {
+      transition: max-height 0.4s ease, opacity 0.4s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobile-menu.open {
+      max-height: 400px;
+      opacity: 1;
+    }
+
+    /* Stagger children */
+    .stagger-child:nth-child(1) { transition-delay: 0.1s; }
+    .stagger-child:nth-child(2) { transition-delay: 0.2s; }
+    .stagger-child:nth-child(3) { transition-delay: 0.3s; }
+    .stagger-child:nth-child(4) { transition-delay: 0.4s; }
+    .stagger-child:nth-child(5) { transition-delay: 0.5s; }
+    .stagger-child:nth-child(6) { transition-delay: 0.6s; }
+
+    /* Scrollbar styling */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0A1628; }
+    ::-webkit-scrollbar-thumb { background: #1E6FFF; border-radius: 3px; }
+
+    /* Form input focus */
+    .form-input:focus {
+      outline: none;
+      border-color: #1E6FFF;
+      box-shadow: 0 0 0 3px rgba(30,111,255,0.15);
+    }
+
+    /* Testimonial card */
+    .testimonial-card {
+      background: linear-gradient(135deg, #fff 0%, #f0f4ff 100%);
+    }
+
+    /* Project icon box */
+    .icon-box {
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .icon-box:hover {
+      transform: scale(1.05);
+      background: rgba(30,111,255,0.15);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 overflow-x-hidden">
+
+  <!-- =========== NAVBAR =========== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-navy transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#home" class="flex items-center gap-2 group">
+        <div class="w-8 h-8 rounded-lg bg-accent flex items-center justify-center">
+          <span class="text-white font-black text-sm">P</span>
+        </div>
+        <span class="text-white font-bold text-xl tracking-tight group-hover:text-gold transition-colors duration-300">
+          The Primeinfotech
+        </span>
+      </a>
+
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#home" class="nav-link text-gray-300 font-medium text-sm active" data-section="home">Home</a>
+        <a href="#about" class="nav-link text-gray-300 font-medium text-sm" data-section="about">About</a>
+        <a href="#services" class="nav-link text-gray-300 font-medium text-sm" data-section="services">Services</a>
+        <a href="#contact" class="nav-link text-gray-300 font-medium text-sm" data-section="contact">Contact</a>
+        <a href="#contact" class="btn-gold text-white font-semibold text-sm px-5 py-2 rounded-lg">Get Leads</a>
+      </div>
+
+      <!-- Hamburger -->
+      <button id="hamburger" class="md:hidden flex flex-col gap-1.5 p-2 group" aria-label="Toggle menu">
+        <span class="block w-6 h-0.5 bg-white transition-all duration-300 group-[.open]:rotate-45 group-[.open]:translate-y-2"></span>
+        <span class="block w-6 h-0.5 bg-white transition-all duration-300 group-[.open]:opacity-0"></span>
+        <span class="block w-6 h-0.5 bg-white transition-all duration-300 group-[.open]:-rotate-45 group-[.open]:-translate-y-2"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden bg-navy border-t border-white/10">
+      <div class="px-6 py-4 flex flex-col gap-4">
+        <a href="#home" class="text-gray-300 font-medium py-2 border-b border-white/10 hover:text-gold transition-colors">Home</a>
+        <a href="#about" class="text-gray-300 font-medium py-2 border-b border-white/10 hover:text-gold transition-colors">About</a>
+        <a href="#services" class="text-gray-300 font-medium py-2 border-b border-white/10 hover:text-gold transition-colors">Services</a>
+        <a href="#contact" class="text-gray-300 font-medium py-2 border-b border-white/10 hover:text-gold transition-colors">Contact</a>
+        <a href="#contact" class="btn-gold text-white font-semibold text-center py-3 rounded-lg mt-2">Get Leads</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========== SECTION 1: HERO =========== -->
+  <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=1600"
+           alt="Financial background"
+           class="w-full h-full object-cover" />
+      <div class="hero-overlay absolute inset-0"></div>
+    </div>
+
+    <!-- Floating dots decoration -->
+    <div class="absolute top-1/4 right-1/4 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-1/4 left-1/4 w-48 h-48 bg-gold/10 rounded-full blur-3xl"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+      <div class="section-badge mb-6">USA & Canada's Loan Lead Experts</div>
+      <h1 class="text-5xl md:text-7xl font-black text-white leading-tight mb-6 fade-up visible" style="line-height:1.1;">
+        Connecting You with<br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-gold">Loan Seekers</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto font-light fade-up visible" style="transition-delay:0.2s;">
+        Quality leads for home, refinance, and personal loans across USA and Canada
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center fade-up visible" style="transition-delay:0.4s;">
+        <a href="#about" class="btn-outline text-white font-semibold px-8 py-4 rounded-xl text-lg">
+          Learn More
+        </a>
+        <a href="#contact" class="btn-gold text-white font-semibold px-8 py-4 rounded-xl text-lg shadow-2xl">
+          Get Leads
+        </a>
+      </div>
+
+      <!-- Stats bar -->
+      <div class="mt-16 grid grid-cols-3 gap-6 max-w-2xl mx-auto fade-up" style="transition-delay:0.6s;">
+        <div class="text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+          <div class="text-3xl font-black text-gold">10K+</div>
+          <div class="text-gray-400 text-sm mt-1">Verified Leads</div>
+        </div>
+        <div class="text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+          <div class="text-3xl font-black text-gold">2</div>
+          <div class="text-gray-400 text-sm mt-1">Countries</div>
+        </div>
+        <div class="text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+          <div class="text-3xl font-black text-gold">98%</div>
+          <div class="text-gray-400 text-sm mt-1">Client Satisfaction</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <div class="w-6 h-10 border-2 border-white/40 rounded-full flex items-start justify-center p-1.5">
+        <div class="w-1 h-3 bg-white/60 rounded-full"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== SECTION 2: WHO WE ARE =========== -->
+  <section id="about" class="py-24 bg-lightbg">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Text -->
+        <div class="fade-up">
+          <div class="section-badge">About Us</div>
+          <h2 class="text-4xl md:text-5xl font-black text-navy mt-4 mb-6 leading-tight">
+            Who We Are
+          </h2>
+          <p class="text-gray-600 text-lg leading-relaxed mb-6">
+            Connecting financial companies with serious loan seekers across the USA and Canada. We source verified, motivated borrowers actively seeking home loans, refinancing, and personal financing solutions.
+          </p>
+          <p class="text-gray-500 text-base leading-relaxed mb-8">
+            Our data-driven approach ensures every lead is qualified and genuinely interested — so your team spends time closing deals, not chasing cold contacts.
+          </p>
+
+          <!-- Feature pills -->
+          <div class="flex flex-wrap gap-3 mb-10">
+            <span class="bg-white border border-gray-200 text-navy text-sm font-medium px-4 py-2 rounded-full shadow-sm">✓ Verified Leads</span>
+            <span class="bg-white border border-gray-200 text-navy text-sm font-medium px-4 py-2 rounded-full shadow-sm">✓ USA & Canada</span>
+            <span class="bg-white border border-gray-200 text-navy text-sm font-medium px-4 py-2 rounded-full shadow-sm">✓ Real-time Data</span>
+            <span class="bg-white border border-gray-200 text-navy text-sm font-medium px-4 py-2 rounded-full shadow-sm">✓ Multiple Loan Types</span>
+          </div>
+
+          <a href="#contact" class="btn-gold inline-block text-white font-semibold px-8 py-4 rounded-xl shadow-lg">
+            Get Leads
+          </a>
+        </div>
+
+        <!-- Image -->
+        <div class="fade-up relative" style="transition-delay:0.2s;">
+          <div class="absolute -top-6 -right-6 w-full h-full bg-accent/10 rounded-2xl"></div>
+          <img src="https://images.unsplash.com/photo-1603201667141-5a2d4c673378?w=600"
+               alt="Financial professionals"
+               class="relative z-10 w-full h-96 object-cover rounded-2xl shadow-2xl" />
+          <!-- Badge overlay -->
+          <div class="absolute bottom-6 left-6 z-20 bg-white rounded-xl p-4 shadow-xl">
+            <div class="text-2xl font-black text-navy">5+ Years</div>
+            <div class="text-gray-500 text-sm">Industry Experience</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== SECTION 3: SERVICES =========== -->
+  <section id="services" class="py-24 bg-navy relative overflow-hidden">
+    <!-- Background pattern -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle at 25% 25%, #1E6FFF 0%, transparent 50%), radial-gradient(circle at 75% 75%, #C8952A 0%, transparent 50%);"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 fade-up">
+        <div class="section-badge">What We Offer</div>
+        <h2 class="text-4xl md:text-5xl font-black text-white mt-4 mb-4">Our Services</h2>
+        <p class="text-gray-400 text-xl max-w-2xl mx-auto">
+          Connecting financial companies with ready-to-act loan seekers across USA and Canada.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="card-hover fade-up stagger-child bg-white/5 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm">
+          <div class="h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1647365363162-54f983245cf1?w=600"
+                 alt="Loan Leads"
+                 class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+          </div>
+          <div class="p-6">
+            <div class="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Loan Leads</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">High-quality leads from customers actively seeking loans.</p>
+            <a href="#contact" class="btn-gold inline-block text-white font-semibold px-6 py-2.5 rounded-lg text-sm">Get Leads</a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card-hover fade-up stagger-child bg-white/5 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm">
+          <div class="h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1592599457566-c660153d9548?w=600"
+                 alt="Home Buyers"
+                 class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+          </div>
+          <div class="p-6">
+            <div class="w-10 h-10 bg-gold/20 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Home Buyers</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">Verified prospects looking to purchase homes or properties.</p>
+            <a href="#contact" class="btn-gold inline-block text-white font-semibold px-6 py-2.5 rounded-lg text-sm">Get Leads</a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card-hover fade-up stagger-child bg-white/5 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm">
+          <div class="h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1587697446083-e96d16f0be94?w=600"
+                 alt="Refinance Leads"
+                 class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+          </div>
+          <div class="p-6">
+            <div class="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Refinance Leads</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">Leads interested in refinancing to better rates and terms.</p>
+            <a href="#contact" class="btn-gold inline-block text-white font-semibold px-6 py-2.5 rounded-lg text-sm">Get Leads</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== SECTION 4: SAMPLE PROPERTIES =========== -->
+  <section class="py-24 bg-lightbg">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 fade-up">
+        <div class="section-badge">Property Examples</div>
+        <h2 class="text-4xl md:text-5xl font-black text-navy mt-4 mb-4">Sample Lead Properties</h2>
+        <p class="text-gray-500 text-xl max-w-2xl mx-auto">
+          Examples of property types our leads are seeking financing for.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Property Card 1 -->
+        <div class="card-hover fade-up stagger-child bg-white rounded-2xl overflow-hidden shadow-md">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1647579350413-a6ada4e480ed?w=400"
+                 alt="Cozy Family Home"
+                 class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+            <div class="absolute top-4 right-4 bg-gold text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">$250K</div>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-bold text-navy mb-1">Cozy Family Home</h3>
+            <p class="text-gray-500 text-sm mb-4">Perfect for first-time buyers</p>
+            <a href="#contact" class="btn-gold inline-block text-white text-sm font-semibold px-5 py-2.5 rounded-lg w-full text-center">Get Leads</a>
+          </div>
+        </div>
+
+        <!-- Property Card 2 -->
+        <div class="card-hover fade-up stagger-child bg-white rounded-2xl overflow-hidden shadow-md">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1691425648793-8412963f3909?w=400"
+                 alt="Urban Apartment"
+                 class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+            <div class="absolute top-4 right-4 bg-gold text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">$320K</div>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-bold text-navy mb-1">Urban Apartment</h3>
+            <p class="text-gray-500 text-sm mb-4">Ideal for city living</p>
+            <a href="#contact" class="btn-gold inline-block text-white text-sm font-semibold px-5 py-2.5 rounded-lg w-full text-center">Get Leads</a>
+          </div>
+        </div>
+
+        <!-- Property Card 3 -->
+        <div class="card-hover fade-up stagger-child bg-white rounded-2xl overflow-hidden shadow-md">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1604170665198-4f7185bc3c01?w=400"
+                 alt="Luxury Condo"
+                 class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+            <div class="absolute top-4 right-4 bg-gold text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">$450K</div>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-bold text-navy mb-1">Luxury Condo</h3>
+            <p class="text-gray-500 text-sm mb-4">High-end finishes included</p>
+            <a href="#contact" class="btn-gold inline-block text-white text-sm font-semibold px-5 py-2.5 rounded-lg w-full text-center">Get Leads</a>
+          </div>
+        </div>
+
+        <!-- Property Card 4 -->
+        <div class="card-hover fade-up stagger-child bg-white rounded-2xl overflow-hidden shadow-md">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1606130887452-7d0cb055e30b?w=400"
+                 alt="Country Ranch"
+                 class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+            <div class="absolute top-4 right-4 bg-gold text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">$380K</div>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-bold text-navy mb-1">Country Ranch</h3>
+            <p class="text-gray-500 text-sm mb-4">Peaceful setting, lots of space</p>
+            <a href="#contact" class="btn-gold inline-block text-white text-sm font-semibold px-5 py-2.5 rounded-lg w-full text-center">Get Leads</a>
+          </div>
+        </div>
+
+        <!-- Property Card 5 -->
+        <div class="card-hover fade-up stagger-child bg-white rounded-2xl overflow-hidden shadow-md">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1683472698811-f0f52f50434c?w=400"
+                 alt="Starter Home"
+                 class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+            <div class="absolute top-4 right-4 bg-gold text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">$200K</div>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-bold text-navy mb-1">Starter Home</h3>
+            <p class="text-gray-500 text-sm mb-4">Affordable and move-in ready</p>
+            <a href="#contact" class="btn-gold inline-block text-white text-sm font-semibold px-5 py-2.5 rounded-lg w-full text-center">Get Leads</a>
+          </div>
+        </div>
+
+        <!-- Property Card 6 -->
+        <div class="card-hover fade-up stagger-child bg-white rounded-2xl overflow-hidden shadow-md">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1696846911635-83b97e53fb65?w=400"
+                 alt="Modern Townhouse"
+                 class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+            <div class="absolute top-4 right-4 bg-gold text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">$310K</div>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-bold text-navy mb-1">Modern Townhouse</h3>
+            <p class="text-gray-500 text-sm mb-4">Close to schools and shops</p>
+            <a href="#contact" class="btn-gold inline-block text-white text-sm font-semibold px-5 py-2.5 rounded-lg w-full text-center">Get Leads</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== SECTION 5: FAQ =========== -->
+  <section id="faq" class="py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-16 fade-up">
+        <div class="section-badge">Got Questions?</div>
+        <h2 class="text-4xl md:text-5xl font-black text-navy mt-4">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="space-y-4 fade-up" style="transition-delay:0.2s;">
+
+        <!-- FAQ 1 -->
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+          <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left bg-navy hover:bg-navy/90 transition-colors duration-200">
+            <span class="font-semibold text-white text-base">What is PrimeInfotech?</span>
+            <svg class="faq-icon w-5 h-5 text-gold flex-shrink-0 ml-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="faq-content open">
+            <p class="px-6 py-4 text-gray-600 text-sm leading-relaxed border-t border-gray-100">We provide loan leads to financial companies in the US and Canada.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+          <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left bg-white hover:bg-gray-50 transition-colors duration-200">
+            <span class="font-semibold text-navy text-base">How do you collect leads?</span>
+            <svg class="faq-icon w-5 h-5 text-gold flex-shrink-0 ml-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="faq-content">
+            <p class="px-6 py-4 text-gray-600 text-sm leading-relaxed border-t border-gray-100">We gather data from platforms like Google Ads, Meta, and others where interested customers fill out forms.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+          <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left bg-white hover:bg-gray-50 transition-colors duration-200">
+            <span class="font-semibold text-navy text-base">Who can use your leads?</span>
+            <svg class="faq-icon w-5 h-5 text-gold flex-shrink-0 ml-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="faq-content">
+            <p class="px-6 py-4 text-gray-600 text-sm leading-relaxed border-t border-gray-100">Financial companies looking for customers interested in loans, home buying, refinancing, or property purchases.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+          <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left bg-white hover:bg-gray-50 transition-colors duration-200">
+            <span class="font-semibold text-navy text-base">Where are your leads from?</span>
+            <svg class="faq-icon w-5 h-5 text-gold flex-shrink-0 ml-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="faq-content">
+            <p class="px-6 py-4 text-gray-600 text-sm leading-relaxed border-t border-gray-100">Our leads primarily come from the USA and Canada.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+          <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left bg-white hover:bg-gray-50 transition-colors duration-200">
+            <span class="font-semibold text-navy text-base">Is the data verified?</span>
+            <svg class="faq-icon w-5 h-5 text-gold flex-shrink-0 ml-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="faq-content">
+            <p class="px-6 py-4 text-gray-600 text-sm leading-relaxed border-t border-gray-100">Yes, we ensure the leads are genuine and interested in financial services.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+          <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left bg-white hover:bg-gray-50 transition-colors duration-200">
+            <span class="font-semibold text-navy text-base">How can I get started?</span>
+            <svg class="faq-icon w-5 h-5 text-gold flex-shrink-0 ml-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="faq-content">
+            <p class="px-6 py-4 text-gray-600 text-sm leading-relaxed border-t border-gray-100">Simply contact us through our website or loaneg.com to discuss your requirements and start receiving leads.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== SECTION 6: TESTIMONIAL =========== -->
+  <section class="py-24 bg-lightbg">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <div class="section-badge mb-8 fade-up">Client Success</div>
+      <div class="testimonial-card rounded-3xl p-10 md:p-16 shadow-xl border border-gray-100 fade-up" style="transition-delay:0.2s;">
+        <!-- Stars -->
+        <div class="flex justify-center gap-1 mb-6">
+          <span class="text-gold text-3xl">★★★★★</span>
+        </div>
+        <!-- Quote -->
+        <blockquote class="text-2xl md:text-3xl font-semibold text-navy leading-relaxed mb-8 max-w-2xl mx-auto">
+          <span class="text-gold text-6xl leading-none font-serif">"</span><br />
+          Thanks to the primeinfotech, we connected with serious homebuyers quickly and boosted our loan approvals.
+        </blockquote>
+        <!-- Author -->
+        <div class="flex items-center justify-center gap-4">
+          <img src="https://images.unsplash.com/photo-1552345387-6ba8e88460a7?w=80"
+               alt="J. Lee"
+               class="w-14 h-14 rounded-full object-cover border-4 border-gold shadow-md" />
+          <div class="text-left">
+            <div class="font-bold text-navy text-lg">J. Lee</div>
+            <div class="text-gray-500 text-sm">Financial Services Director</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== SECTION 7: OUR PROJECTS =========== -->
+  <section class="py-24 bg-navy relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10"
+         style="background-image: radial-gradient(circle at 80% 20%, #1E6FFF 0%, transparent 40%), radial-gradient(circle at 20% 80%, #C8952A 0%, transparent 40%);">
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 fade-up">
+        <div class="section-badge">What We Do</div>
+        <h2 class="text-4xl md:text-5xl font-black text-white mt-4 mb-4">Our Projects</h2>
+        <p class="text-gray-400 text-xl max-w-xl mx-auto">Connecting lenders with eager borrowers.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+        <!-- Project 1 -->
+        <div class="icon-box fade-up stagger-child bg-white/5 border border-white/10 rounded-2xl p-8 text-center cursor-default">
+          <div class="text-5xl mb-4">🏠</div>
+          <h3 class="text-white font-bold text-lg mb-2">Home Loans</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Qualified buyers seeking new homes.</p>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="icon-box fade-up stagger-child bg-white/5 border border-white/10 rounded-2xl p-8 text-center cursor-default">
+          <div class="text-5xl mb-4">📉</div>
+          <h3 class="text-white font-bold text-lg mb-2">Refinance</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Clients looking to lower rates.</p>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="icon-box fade-up stagger-child bg-white/5 border border-white/10 rounded-2xl p-8 text-center cursor-default">
+          <div class="text-5xl mb-4">🏢</div>
+          <h3 class="text-white font-bold text-lg mb-2">Property Loans</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Investors ready to buy properties.</p>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="icon-box fade-up stagger-child bg-white/5 border border-white/10 rounded-2xl p-8 text-center cursor-default">
+          <div class="text-5xl mb-4">📊</div>
+          <h3 class="text-white font-bold text-lg mb-2">Lead Sourcing</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Data collected from top platforms.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== SECTION 8: CONTACT =========== -->
+  <section id="contact" class="py-24 bg-lightbg">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 fade-up">
+        <div class="section-badge">Reach Out</div>
+        <h2 class="text-4xl md:text-5xl font-black text-navy mt-4">Contact Us</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+        <!-- Form -->
+        <div class="fade-up bg-white rounded-3xl p-8 md:p-10 shadow-xl border border-gray-100">
+          <h3 class="text-2xl font-bold text-navy mb-2">Start Getting Leads</h3>
+          <p class="text-gray-500 text-sm mb-8">Fill out the form and our team will reach out within 24 hours.</p>
+
+          <form id="contact-form" class="space-y-5">
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-2">Full Name</label>
+              <input type="text" id="name" placeholder="John Smith"
+                     class="form-input w-full border border-gray-200 rounded-xl px-4 py-3.5 text-sm text-gray-700 bg-gray-50 transition-all duration-200" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-2">Email Address <span class="text-red-500">*</span></label>
+              <input type="email" id="email" placeholder="john@company.com" required
+                     class="form-input w-full border border-gray-200 rounded-xl px-4 py-3.5 text-sm text-gray-700 bg-gray-50 transition-all duration-200" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-2">Phone Number <span class="text-red-500">*</span></label>
+              <input type="tel" id="phone" placeholder="+1 (555) 000-0000" required
+                     class="form-input w-full border border-gray-200 rounded-xl px-4 py-3.5 text-sm text-gray-700 bg-gray-50 transition-all duration-200" />
+            </div>
+
+            <button type="submit"
+                    class="btn-gold w-full text-white font-bold py-4 rounded-xl text-base mt-2 shadow-lg">
+              Get Loan Leads
+            </button>
+          </form>
+
+          <!-- Success message -->
+          <div id="success-msg" class="hidden mt-6 p-5 bg-green-50 border border-green-200 rounded-xl text-center">
+            <div class="text-3xl mb-2">✅</div>
+            <p class="text-green-700 font-semibold">Thanks! We'll be in touch shortly.</p>
+            <p class="text-green-600 text-sm mt-1">Our team will contact you within 24 hours.</p>
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div class="fade-up space-y-6" style="transition-delay:0.2s;">
+          <!-- Banner Image -->
+          <div class="rounded-2xl overflow-hidden h-52 shadow-lg">
+            <img src="https://images.unsplash.com/photo-1703072662739-70940f1fe9d6?w=800"
+                 alt="Contact"
+                 class="w-full h-full object-cover" />
+          </div>
+
+          <!-- Info Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center text-xl">🇺🇸</div>
+                <span class="font-bold text-navy">USA Office</span>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed">123 Finance Ave, New York</p>
+              <p class="text-gray-500 text-xs mt-1">Mon–Fri, 9am–6pm</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 bg-gold/10 rounded-xl flex items-center justify-center text-xl">🇨🇦</div>
+                <span class="font-bold text-navy">Canada Office</span>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed">456 Maple St, Toronto</p>
+              <p class="text-gray-500 text-xs mt-1">Mon–Fri, 9am–5pm</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center">
+                  <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <span class="font-bold text-navy">Email</span>
+              </div>
+              <p class="text-gray-600 text-sm">support@loaneg.com</p>
+              <p class="text-gray-500 text-xs mt-0.5">info@primeinfotech.com</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 bg-gold/10 rounded-xl flex items-center justify-center">
+                  <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                  </svg>
+                </div>
+                <span class="font-bold text-navy">Phone</span>
+              </div>
+              <p class="text-gray-600 text-sm">+1-555-789-1234</p>
+              <p class="text-gray-500 text-xs mt-0.5">Available weekdays</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== FOOTER =========== -->
+  <footer class="bg-navy pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-white/10">
+
+        <!-- Brand -->
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-8 h-8 rounded-lg bg-accent flex items-center justify-center">
+              <span class="text-white font-black text-sm">P</span>
+            </div>
+            <span class="text-white font-bold text-xl">The Primeinfotech</span>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed">Helping you connect with the right leads</p>
+          <!-- Social icons -->
+          <div class="flex gap-3 mt-6">
+            <a href="#" aria-label="Facebook"
+               class="w-10 h-10 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-accent/20 hover:border-accent/30 transition-all duration-200">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Instagram"
+               class="w-10 h-10 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-accent/20 hover:border-accent/30 transition-all duration-200">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="TikTok"
+               class="w-10 h-10 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-accent/20 hover:border-accent/30 transition-all duration-200">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.3 6.3 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Twitter/X"
+               class="w-10 h-10 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-accent/20 hover:border-accent/30 transition-all duration-200">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-white font-bold text-base mb-5">Quick Links</h4>
+          <div class="flex flex-col gap-3">
+            <a href="#home" class="text-gray-400 text-sm hover:text-gold transition-colors duration-200">Home</a>
+            <a href="#about" class="text-gray-400 text-sm hover:text-gold transition-colors duration-200">About</a>
+            <a href="#services" class="text-gray-400 text-sm hover:text-gold transition-colors duration-200">Services</a>
+            <a href="#faq" class="text-gray-400 text-sm hover:text-gold transition-colors duration-200">FAQ</a>
+            <a href="#contact" class="text-gray-400 text-sm hover:text-gold transition-colors duration-200">Contact</a>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="text-white font-bold text-base mb-5">Get in Touch</h4>
+          <div class="space-y-3">
+            <p class="text-gray-400 text-sm flex items-start gap-2">
+              <span class="text-gold mt-0.5">✉</span> support@loaneg.com
+            </p>
+            <p class="text-gray-400 text-sm flex items-start gap-2">
+              <span class="text-gold mt-0.5">✉</span> info@primeinfotech.com
+            </p>
+            <p class="text-gray-400 text-sm flex items-start gap-2">
+              <span class="text-gold mt-0.5">☎</span> +1-555-789-1234
+            </p>
+            <p class="text-gray-400 text-sm flex items-start gap-2">
+              <span class="text-gold mt-0.5">📍</span> USA & Canada
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="pt-8 text-center">
+        <p class="text-gray-500 text-sm">© 2025 The Primeinfotech. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========== JAVASCRIPT =========== -->
+  <script>
+    // ---- Hamburger toggle ----
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
+
+    // ---- Navbar scroll shadow ----
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        navbar.classList.add('navbar-scrolled');
+      } else {
+        navbar.classList.remove('navbar-scrolled');
+      }
+    });
+
+    // ---- Active nav link on scroll (Intersection Observer) ----
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link[data-section]');
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.dataset.section === id) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }, { threshold: 0.4 });
+
+    sections.forEach(section => sectionObserver.observe(section));
+
+    // ---- Scroll animations (fade-up) ----
+    const fadeElements = document.querySelectorAll('.fade-up');
+
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+    fadeElements.forEach(el => {
+      // Don't re-observe already-visible hero elements
+      if (!el.classList.contains('visible')) {
+        fadeObserver.observe(el);
+      }
+    });
+
+    // ---- FAQ Accordion ----
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const trigger = item.querySelector('.faq-trigger');
+      const content = item.querySelector('.faq-content');
+      const icon = item.querySelector('.faq-icon');
+
+      trigger.addEventListener('click', () => {
+        const isOpen = content.classList.contains('open');
+
+        // Close all
+        faqItems.forEach(other => {
+          other.querySelector('.faq-content').classList.remove('open');
+          other.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+          other.querySelector('.faq-trigger').classList.remove('bg-navy');
+          other.querySelector('.faq-trigger').classList.add('bg-white');
+          other.querySelector('.faq-trigger span').classList.remove('text-white');
+          other.querySelector('.faq-trigger span').classList.add('text-navy');
+        });
+
+        // Open clicked if it was closed
+        if (!isOpen) {
+          content.classList.add('open');
+          icon.style.transform = 'rotate(180deg)';
+          trigger.classList.add('bg-navy');
+          trigger.classList.remove('bg-white');
+          trigger.querySelector('span').classList.add('text-white');
+          trigger.querySelector('span').classList.remove('text-navy');
+        }
+      });
+    });
+
+    // ---- Contact form ----
+    const form = document.getElementById('contact-form');
+    const successMsg = document.getElementById('success-msg');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      form.style.opacity = '0';
+      form.style.transform = 'translateY(-10px)';
+      form.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+
+      setTimeout(() => {
+        form.style.display = 'none';
+        successMsg.classList.remove('hidden');
+        successMsg.style.opacity = '0';
+        successMsg.style.transform = 'translateY(10px)';
+        successMsg.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+
+        requestAnimationFrame(() => {
+          successMsg.style.opacity = '1';
+          successMsg.style.transform = 'translateY(0)';
+        });
+      }, 300);
+    });
+  </script>
+</body>
+</html>

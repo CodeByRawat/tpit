@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: #ffffff;
+  color: #1B2D5A;
+  font-family: 'Inter', sans-serif;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #EDF5EC; }
+::-webkit-scrollbar-thumb { background: #7EAB78; border-radius: 4px; }
+
+@layer utilities {
+  /* Black pill CTA */
+  .btn-primary {
+    display: inline-block;
+    background: #1B2D5A;
+    color: #ffffff;
+    font-weight: 700;
+    border-radius: 999px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(27,45,90,0.25);
+  }
+
+  /* Green outline button */
+  .btn-outline-green {
+    display: inline-block;
+    border: 2px solid #7EAB78;
+    color: #7EAB78;
+    font-weight: 600;
+    border-radius: 999px;
+    background: transparent;
+    transition: background 0.25s ease, color 0.25s ease;
+  }
+  .btn-outline-green:hover {
+    background: #7EAB78;
+    color: #ffffff;
+  }
+
+  /* Card hover */
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(27,45,90,0.10);
+  }
+
+  /* Section label pill */
+  .tag-pill {
+    display: inline-block;
+    background: #EDF5EC;
+    color: #7EAB78;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    padding: 4px 14px;
+    border: 1px solid #A8C9A3;
+  }
+
+  /* Nav link underline */
+  .nav-link {
+    position: relative;
+    font-weight: 600;
+    color: #1B2D5A;
+    transition: color 0.2s;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #7EAB78;
+    transition: width 0.3s ease;
+  }
+  .nav-link:hover::after,
+  .nav-link.active::after { width: 100%; }
+  .nav-link.active { color: #1B2D5A; }
+
+  /* Floating icon bubble */
+  .icon-bubble {
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 8px 32px rgba(27,45,90,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Form input */
+  .form-input {
+    background: #ffffff;
+    border: 1.5px solid #D4E8D1;
+    border-radius: 12px;
+    color: #1B2D5A;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .form-input:focus {
+    outline: none;
+    border-color: #7EAB78;
+    box-shadow: 0 0 0 3px rgba(126,171,120,0.15);
+  }
+  .form-input::placeholder { color: #6B7A99; opacity: 0.7; }
+}
