@@ -45,7 +45,7 @@ export default function Navbar() {
             <div className="absolute top-0 right-0 w-4 h-4 rounded-full bg-yellow border-2 border-white" />
           </div>
           <span className={`font-black text-xl tracking-tight ${scrolled ? 'text-navy' : 'text-white'}`}>
-            Prime<span className={scrolled ? 'text-green-hero' : 'text-white'}>info</span>tech
+            Theprime<span className={scrolled ? 'text-green-hero' : 'text-white'}>info</span>tech
           </span>
         </a>
 

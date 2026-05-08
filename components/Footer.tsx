@@ -25,10 +25,10 @@ export default function Footer() {
                 <div className="w-9 h-9 rounded-full bg-white/20" />
                 <div className="absolute top-0 right-0 w-4 h-4 rounded-full bg-yellow border-2 border-navy" />
               </div>
-              <span className="text-white font-black text-xl">The Primeinfotech</span>
+              <span className="text-white font-black text-xl">Theprimeinfotech</span>
             </a>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs mb-6">
-              Helping financial companies connect with the right loan leads across USA &amp; Canada.
+              Helping financial companies connect with the right loan leads across Canada.
             </p>
             <div className="flex gap-3">
               {SOCIALS.map(({ label, icon }) => (
@@ -64,7 +64,7 @@ export default function Footer() {
                 { icon: '✉', text: 'support@loaneg.com' },
                 { icon: '✉', text: 'info@primeinfotech.com' },
                 { icon: '☎', text: '+1-555-789-1234' },
-                { icon: '📍', text: 'USA & Canada' },
+                { icon: '📍', text: 'Canada' },
               ].map(({ icon, text }) => (
                 <p key={text} className="text-white/50 text-sm flex items-start gap-2">
                   <span className="text-green-hero mt-0.5 text-xs">{icon}</span>
@@ -77,8 +77,8 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-white/30 text-sm">© 2025 The Primeinfotech. All rights reserved.</p>
-          <p className="text-white/30 text-xs">Trusted in USA &amp; Canada</p>
+          <p className="text-white/30 text-sm">© 2025 Theprimeinfotech. All rights reserved.</p>
+          <p className="text-white/30 text-xs">Trusted Across Canada</p>
         </div>
       </div>
     </footer>

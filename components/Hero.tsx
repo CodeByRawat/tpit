@@ -54,7 +54,7 @@ export default function Hero() {
       >
         {/* Tag pill */}
         <div className="inline-block bg-white/90 text-navy border border-white rounded-full px-4 py-1.5 text-xs font-bold tracking-widest uppercase mb-8">
-          USA &amp; Canada Loan Lead Experts
+          Canada Loan Lead Experts
         </div>
 
         <h1 className="text-4xl md:text-5xl xl:text-6xl font-black text-navy leading-[1.08] mb-7">
@@ -68,7 +68,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-navy/75 text-lg leading-relaxed mb-12 max-w-sm font-medium">
-          We deliver verified, motivated loan seekers directly to your pipeline — home buyers, refinancers, and personal loan applicants across the USA and Canada.
+          We deliver verified, motivated loan seekers directly to your pipeline — home buyers and refinancers across Canada.
         </p>
 
         <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-16">

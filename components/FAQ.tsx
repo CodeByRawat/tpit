@@ -4,10 +4,10 @@ import { useState } from 'react'
 import FadeUp from './FadeUp'
 
 const FAQS = [
-  { q: 'What is PrimeInfotech?',      a: 'We provide loan leads to financial companies in the US and Canada.' },
+  { q: 'What is Theprimeinfotech?',    a: 'We provide loan leads to financial companies across Canada.' },
   { q: 'How do you collect leads?',   a: 'We gather data from platforms like Google Ads, Meta, and others where interested customers fill out forms.' },
   { q: 'Who can use your leads?',     a: 'Financial companies looking for customers interested in loans, home buying, refinancing, or property purchases.' },
-  { q: 'Where are your leads from?',  a: 'Our leads primarily come from the USA and Canada.' },
+  { q: 'Where are your leads from?',  a: 'Our leads come from across Canada.' },
   { q: 'Is the data verified?',       a: 'Yes, we ensure the leads are genuine and interested in financial services.' },
   { q: 'How can I get started?',      a: 'Simply contact us through our website or loaneg.com to discuss your requirements and start receiving leads.' },
 ]

@@ -15,7 +15,7 @@ export default function Projects() {
         <FadeUp className="text-center mb-14">
           <div className="tag-pill mb-4">What We Do</div>
           <h2 className="text-4xl md:text-5xl font-black text-navy mb-3">Our Projects</h2>
-          <p className="text-muted text-lg max-w-md mx-auto">Connecting lenders with eager borrowers across USA &amp; Canada.</p>
+          <p className="text-muted text-lg max-w-md mx-auto">Connecting lenders with eager borrowers across Canada.</p>
         </FadeUp>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-5">

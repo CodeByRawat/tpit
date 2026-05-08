@@ -1,6 +1,6 @@
 import FadeUp from './FadeUp'
 
-const PILLS = ['✓ Verified Leads', '✓ USA & Canada', '✓ Real-time Data', '✓ Multiple Loan Types']
+const PILLS = ['✓ Verified Leads', '✓ Across Canada', '✓ Real-time Data', '✓ Multiple Loan Types']
 
 export default function About() {
   return (
@@ -40,8 +40,8 @@ export default function About() {
               Who We Are
             </h2>
             <p className="text-muted text-lg leading-relaxed mb-4">
-              Connecting financial companies with serious loan seekers across the USA and Canada. We source verified,
-              motivated borrowers actively seeking home loans, refinancing, and personal financing solutions.
+              Connecting financial companies with serious loan seekers across Canada. We source verified,
+              motivated borrowers actively seeking home loans and refinancing solutions.
             </p>
             <p className="text-muted text-base leading-relaxed mb-8">
               Our data-driven approach ensures every lead is qualified and genuinely interested — so your team spends

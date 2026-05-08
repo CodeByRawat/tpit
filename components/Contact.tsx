@@ -5,12 +5,6 @@ import FadeUp from './FadeUp'
 
 const INFO_CARDS = [
   {
-    icon: '🇺🇸',
-    title: 'USA Office',
-    line1: '123 Finance Ave, New York',
-    line2: 'Mon–Fri, 9am–6pm',
-  },
-  {
     icon: '🇨🇦',
     title: 'Canada Office',
     line1: '456 Maple St, Toronto',
@@ -130,7 +124,7 @@ export default function Contact() {
             </div>
 
             {/* 2×2 info cards — all white, same border, same layout */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {INFO_CARDS.map(({ icon, title, line1, line2 }) => (
                 <div
                   key={title}

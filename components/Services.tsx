@@ -38,7 +38,7 @@ export default function Services() {
               Home Loan <br />Services
             </h2>
             <p className="text-muted text-base leading-relaxed max-w-xs">
-              Connecting financial companies with ready-to-act loan seekers across USA and Canada.
+              Connecting financial companies with ready-to-act loan seekers across Canada.
             </p>
           </div>
         </FadeUp>

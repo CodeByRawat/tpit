@@ -5,9 +5,9 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
-  title: 'Trusted Loan Leads for Financial Companies | The Primeinfotech',
+  title: 'Trusted Loan Leads for Financial Companies | Theprimeinfotech',
   description:
-    'The Primeinfotech connects lenders with verified loan seekers across the USA and Canada, delivering quality leads from homebuyers, refinancers, and property buyers.',
+    'Theprimeinfotech connects lenders with verified loan seekers across Canada, delivering quality leads from homebuyers and refinancers.',
   keywords: 'loan leads, home financing, refinance leads',
 }
 
