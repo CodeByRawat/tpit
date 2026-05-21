@@ -36,14 +36,14 @@ const CheckIcon = () => (
 function LeadCard({ title, desc, index, delay }: { title: string; desc: string; index: number; delay: number }) {
   return (
     <FadeUp delay={delay} className="h-full">
-      <div className="h-full flex flex-col items-center text-center rounded-2xl p-6 border transition-all duration-300 cursor-default hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.3)] bg-[rgba(255,255,255,0.05)] border-[rgba(255,255,255,0.09)] hover:bg-[rgba(255,255,255,0.10)] hover:border-[rgba(126,171,120,0.45)]">
+      <a href="#contact" className="h-full flex flex-col items-center text-center rounded-2xl p-6 border transition-all duration-300 cursor-pointer hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.3)] bg-[rgba(255,255,255,0.05)] border-[rgba(255,255,255,0.09)] hover:bg-[rgba(255,255,255,0.10)] hover:border-[rgba(126,171,120,0.45)]">
         <span className="text-[10px] font-black tracking-[0.18em] text-white/25 mb-3 block">
           {String(index + 1).padStart(2, '0')}
         </span>
         <div className="w-8 h-0.5 rounded-full mb-4 mx-auto" style={{ background: '#7EAB78' }} />
         <h4 className="text-white font-semibold text-sm mb-2 leading-snug">{title}</h4>
         <p className="text-white/65 text-xs leading-relaxed">{desc}</p>
-      </div>
+      </a>
     </FadeUp>
   )
 }

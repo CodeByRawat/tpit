@@ -49,7 +49,7 @@ export default function Hero() {
 
       {/* ── Text column ── */}
       <div
-        className="relative flex flex-col items-center lg:items-start justify-center text-center lg:text-left px-8 lg:pl-20 xl:pl-28 lg:pr-0 lg:w-[44%] min-h-screen pt-10 pb-16 lg:py-0"
+        className="relative flex flex-col items-center lg:items-start justify-center text-center lg:text-left px-8 lg:pl-20 xl:pl-28 lg:pr-0 lg:w-[44%] min-h-screen pt-10 pb-16 lg:pt-28 lg:pb-12"
         style={{ zIndex: 3 }}
       >
         {/* Tag pill */}

@@ -44,9 +44,9 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-6">
 
         <FadeUp className="text-center mb-14">
-          <div className="tag-pill mb-4">Reach Out</div>
-          <h2 className="text-4xl md:text-5xl font-black text-navy">Contact Us</h2>
-          <p className="text-muted mt-3 text-lg">We&apos;ll get back to you within 24 hours.</p>
+          <div className="tag-pill mb-4">Get In Touch</div>
+          <h2 className="text-4xl md:text-5xl font-black text-navy">Get In Touch</h2>
+          <p className="text-muted mt-3 text-lg">Tell us what you need and we&apos;ll get back to you within 24 hours.</p>
         </FadeUp>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
@@ -60,7 +60,7 @@ export default function Contact() {
                   <FormIcon />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-navy">Start Getting Leads</h3>
+                  <h3 className="text-xl font-bold text-navy">Ask for a Custom Quote</h3>
                   <p className="text-muted text-xs">Fill in the form and our team will reach out shortly.</p>
                 </div>
               </div>
