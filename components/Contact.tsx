@@ -40,7 +40,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 bg-green-pale">
+    <section id="contact" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
 
         <FadeUp className="text-center mb-14">
