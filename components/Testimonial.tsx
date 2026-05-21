@@ -48,7 +48,7 @@ export default function Testimonial() {
               {/* Quote column */}
               <div>
                 <blockquote className="text-xl md:text-2xl font-semibold text-navy leading-relaxed mb-6">
-                  &ldquo;Thanks to Theprimeinfotech, we connected with serious homebuyers quickly and boosted our loan approvals significantly.&rdquo;
+                  &ldquo;Thanks to The Prime Infotech, we connected with serious homebuyers quickly and boosted our loan approvals significantly.&rdquo;
                 </blockquote>
                 {/* Green tag pill inline */}
                 <span className="tag-pill">Verified Client</span>

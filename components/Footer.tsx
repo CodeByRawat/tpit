@@ -25,7 +25,7 @@ export default function Footer() {
                 <div className="w-9 h-9 rounded-full bg-white/20" />
                 <div className="absolute top-0 right-0 w-4 h-4 rounded-full bg-yellow border-2 border-navy" />
               </div>
-              <span className="text-white font-black text-xl">Theprimeinfotech</span>
+              <span className="text-white font-black text-xl">The Prime Infotech</span>
             </a>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs mb-6">
               Helping financial companies connect with the right loan leads across Canada.
@@ -61,13 +61,21 @@ export default function Footer() {
             <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-5">Contact</h4>
             <div className="space-y-3">
               {[
-                { icon: '✉', text: 'support@loaneg.com' },
-                { icon: '✉', text: 'info@primeinfotech.com' },
-                { icon: '☎', text: '+1-555-789-1234' },
-                { icon: '📍', text: 'Canada' },
-              ].map(({ icon, text }) => (
+                {
+                  text: 'info@primeinfotech.com',
+                  svg: <svg className="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-green-hero" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>,
+                },
+                {
+                  text: '+1 (647) 367-8348',
+                  svg: <svg className="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-green-hero" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>,
+                },
+                {
+                  text: 'Toronto, Ontario, Canada',
+                  svg: <svg className="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-green-hero" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" /><circle cx="12" cy="9" r="2.5" /></svg>,
+                },
+              ].map(({ svg, text }) => (
                 <p key={text} className="text-white/50 text-sm flex items-start gap-2">
-                  <span className="text-green-hero mt-0.5 text-xs">{icon}</span>
+                  {svg}
                   {text}
                 </p>
               ))}
@@ -77,7 +85,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-white/30 text-sm">© 2025 Theprimeinfotech. All rights reserved.</p>
+          <p className="text-white/30 text-sm">© 2025 The Prime Infotech. All rights reserved.</p>
           <p className="text-white/30 text-xs">Trusted Across Canada</p>
         </div>
       </div>

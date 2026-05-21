@@ -4,12 +4,12 @@ import { useState } from 'react'
 import FadeUp from './FadeUp'
 
 const FAQS = [
-  { q: 'What is Theprimeinfotech?',    a: 'We provide loan leads to financial companies across Canada.' },
-  { q: 'How do you collect leads?',   a: 'We gather data from platforms like Google Ads, Meta, and others where interested customers fill out forms.' },
-  { q: 'Who can use your leads?',     a: 'Financial companies looking for customers interested in loans, home buying, refinancing, or property purchases.' },
-  { q: 'Where are your leads from?',  a: 'Our leads come from across Canada.' },
-  { q: 'Is the data verified?',       a: 'Yes, we ensure the leads are genuine and interested in financial services.' },
-  { q: 'How can I get started?',      a: 'Simply contact us through our website or loaneg.com to discuss your requirements and start receiving leads.' },
+  { q: 'What is The Prime Infotech?',        a: 'We are a performance-driven lead generation company specializing in high-intent mortgage and real estate leads across Canada.' },
+  { q: 'How do you collect leads?',          a: 'We generate leads through TCPA-compliant, intent-based campaigns on platforms like Google Ads and Meta, where consumers fill out forms expressing active interest.' },
+  { q: 'Who can use your leads?',            a: 'Lenders, mortgage brokers, and real estate professionals looking for qualified prospects actively seeking home loans, refinancing, or property transactions.' },
+  { q: 'Where are your leads from?',         a: 'All our leads come from across Canada. We do not supply leads from outside Canada.' },
+  { q: 'Is the data verified and compliant?', a: 'Yes. Every lead is 100% TCPA & DNC compliant with timestamp and IP recorded. We also have a replacement policy for bad leads.' },
+  { q: 'How can I get started?',             a: 'Contact us to request a test batch of 20 leads with no contracts required. Packages of 50–500 leads include 2 free trial leads.' },
 ]
 
 export default function FAQ() {

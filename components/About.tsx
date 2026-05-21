@@ -1,6 +1,6 @@
 import FadeUp from './FadeUp'
 
-const PILLS = ['✓ Verified Leads', '✓ Across Canada', '✓ Real-time Data', '✓ Multiple Loan Types']
+const PILLS = ['TCPA Compliant', 'Across Canada', 'Real-Time Delivery', 'Exclusive Leads']
 
 export default function About() {
   return (
@@ -23,11 +23,11 @@ export default function About() {
             </div>
             {/* Floating stat card */}
             <div className="absolute -bottom-6 -right-4 bg-white rounded-2xl p-5 shadow-xl border border-green-light">
-              <div className="text-3xl font-black text-navy">5+</div>
+              <div className="text-3xl font-black text-navy">15+</div>
               <div className="text-muted text-sm font-medium">Years Experience</div>
               <div className="flex gap-1 mt-2">
                 {[...Array(5)].map((_, i) => (
-                  <div key={i} className="w-5 h-1.5 rounded-full" style={{ background: i < 4 ? '#7EAB78' : '#D4E8D1' }} />
+                  <div key={i} className="w-5 h-1.5 rounded-full" style={{ background: '#7EAB78' }} />
                 ))}
               </div>
             </div>
@@ -40,12 +40,20 @@ export default function About() {
               Who We Are
             </h2>
             <p className="text-muted text-lg leading-relaxed mb-4">
-              Connecting financial companies with serious loan seekers across Canada. We source verified,
-              motivated borrowers actively seeking home loans and refinancing solutions.
+              We are a performance-driven lead generation company specializing in high-intent mortgage
+              and real estate leads. For over 15 years, we&apos;ve helped lenders, brokers, and real estate
+              professionals grow their pipeline with qualified prospects actively seeking financial and
+              property solutions.
+            </p>
+            <p className="text-muted text-base leading-relaxed mb-4">
+              Our expertise covers the full spectrum of consumer needs — mortgage leads including new
+              purchase, refinance, mortgage renewal, line of credit, and debt consolidation, as well as
+              real estate leads for buyers, sellers, and property owners ready to take action.
             </p>
             <p className="text-muted text-base leading-relaxed mb-8">
-              Our data-driven approach ensures every lead is qualified and genuinely interested — so your team spends
-              time closing deals, not chasing cold contacts.
+              Every lead we deliver is generated through TCPA-compliant, intent-based campaigns designed
+              to connect you with consumers at the moment they&apos;re ready to talk. We focus on quality,
+              transparency, and real-time delivery so your team spends less time chasing and more time closing.
             </p>
             <div className="flex flex-wrap gap-3 mb-10">
               {PILLS.map((p) => (

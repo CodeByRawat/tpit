@@ -3,25 +3,32 @@
 import { useState, type FormEvent } from 'react'
 import FadeUp from './FadeUp'
 
+const LocationIcon = () => (
+  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+    <circle cx="12" cy="9" r="2.5" />
+  </svg>
+)
+const MailIcon = () => (
+  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+  </svg>
+)
+const PhoneIcon = () => (
+  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+  </svg>
+)
+const FormIcon = () => (
+  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+  </svg>
+)
+
 const INFO_CARDS = [
-  {
-    icon: '🇨🇦',
-    title: 'Canada Office',
-    line1: '456 Maple St, Toronto',
-    line2: 'Mon–Fri, 9am–5pm',
-  },
-  {
-    icon: '✉️',
-    title: 'Email',
-    line1: 'support@loaneg.com',
-    line2: 'info@primeinfotech.com',
-  },
-  {
-    icon: '📞',
-    title: 'Phone',
-    line1: '+1-555-789-1234',
-    line2: 'Available weekdays',
-  },
+  { Icon: LocationIcon, title: 'Canada Office', line1: 'Toronto, Ontario, Canada', line2: 'Mon–Fri, 9am–5pm EST' },
+  { Icon: MailIcon,     title: 'Email',         line1: 'info@primeinfotech.com',   line2: 'We reply within 24 hrs' },
+  { Icon: PhoneIcon,    title: 'Phone',          line1: '+1 (647) 367-8348',        line2: 'Available weekdays' },
 ]
 
 export default function Contact() {
@@ -48,9 +55,9 @@ export default function Contact() {
           <FadeUp>
             <div className="bg-white rounded-4xl p-8 md:p-10 border border-green-light shadow-sm">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl"
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center text-green-hero"
                      style={{ background: '#EDF5EC', border: '1px solid #A8C9A3' }}>
-                  📋
+                  <FormIcon />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-navy">Start Getting Leads</h3>
@@ -125,14 +132,14 @@ export default function Contact() {
 
             {/* 2×2 info cards — all white, same border, same layout */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {INFO_CARDS.map(({ icon, title, line1, line2 }) => (
+              {INFO_CARDS.map(({ Icon, title, line1, line2 }) => (
                 <div
                   key={title}
                   className="bg-white rounded-2xl p-4 border border-green-light"
                 >
-                  <div className="w-9 h-9 rounded-xl flex items-center justify-center text-lg mb-3"
+                  <div className="w-9 h-9 rounded-xl flex items-center justify-center text-green-hero mb-3"
                        style={{ background: '#EDF5EC', border: '1px solid #A8C9A3' }}>
-                    {icon}
+                    <Icon />
                   </div>
                   <p className="text-navy font-bold text-xs mb-1">{title}</p>
                   <p className="text-muted text-xs leading-relaxed">{line1}</p>

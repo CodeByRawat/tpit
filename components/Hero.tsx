@@ -86,9 +86,9 @@ export default function Hero() {
         {/* Stats */}
         <div className="flex justify-center lg:justify-start gap-10">
           {[
-            { value: '10K+', label: 'Verified Leads' },
-            { value: '98%',  label: 'Satisfaction'   },
-            { value: '2',    label: 'Countries'      },
+            { value: '10K+', label: 'Verified Leads'   },
+            { value: '98%',  label: 'Satisfaction'     },
+            { value: '15+',  label: 'Years Experience' },
           ].map(({ value, label }) => (
             <div key={label}>
               <div className="text-3xl font-black text-navy">{value}</div>

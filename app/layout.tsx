@@ -5,10 +5,10 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
-  title: 'Trusted Loan Leads for Financial Companies | Theprimeinfotech',
+  title: 'Trusted Mortgage & Real Estate Leads | The Prime Infotech',
   description:
-    'Theprimeinfotech connects lenders with verified loan seekers across Canada, delivering quality leads from homebuyers and refinancers.',
-  keywords: 'loan leads, home financing, refinance leads',
+    'The Prime Infotech connects lenders, brokers, and real estate professionals with high-intent, TCPA-compliant mortgage and real estate leads across Canada.',
+  keywords: 'mortgage leads, real estate leads, home financing, refinance leads, Canada loan leads',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
