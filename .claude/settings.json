@@ -1,7 +1,21 @@
 {
   "permissions": {
     "allow": [
-      "Bash(curl -s http://localhost:3000)"
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(curl -s -X POST \"https://script.google.com/macros/s/AKfycbxru2-WKv1-ma7pUw8V04g9NnqkYrO5Nozrqh3hJmrl1UoucGyrf3p6oFkZpvn1DfTHDA/exec\" -H \"Content-Type: text/plain;charset=utf-8\" -d '{\"name\":\"Test User\",\"email\":\"test@example.com\",\"phone\":\"+1-555-0000\"}' -L -i)",
+      "Bash(curl -s -X POST \"https://script.google.com/macros/s/AKfycbzOX6mZ32Z8NQFjymE-955PcM-nWJ71GrxF_QjCTB-uCaC-zdTwQfO6HBiVDsJt7jKR/exec\" -H \"Content-Type: text/plain;charset=utf-8\" -d '{\"name\":\"Test User\",\"email\":\"test@example.com\",\"phone\":\"+1-555-0000\"}' --post302 --post301 --post303 -L -i)",
+      "Bash(ls /Users/sachinrawat/Desktop/theprimeinfotech/node_modules 2>/dev/null | grep -iE \"puppeteer|playwright\" ; which chromium chrome google-chrome 2>/dev/null; ls \"/Applications/Google Chrome.app\" 2>/dev/null && echo \"chrome app found\")",
+      "Read(//Applications/Google Chrome.app/**)",
+      "Bash(osascript -e 'tell application \"Google Chrome\" to activate' -e 'tell application \"Google Chrome\" to open location \"http://localhost:3000\"' -e 'delay 2')",
+      "Bash(osascript)",
+      "Bash(osascript -e 'tell application \"Google Chrome\" to set jsResult to execute \\(active tab of front window\\) javascript \"document.title\"' -e 'return jsResult')",
+      "Bash(osascript -e 'tell application \"System Events\" to tell process \"Google Chrome\" to click menu item \"Allow JavaScript from Apple Events\" of menu \"Developer\" of menu item \"Developer\" of menu \"View\" of menu bar 1')",
+      "Bash(osascript -e 'tell application \"Safari\" to activate' -e 'tell application \"Safari\" to open location \"http://localhost:3000\"' -e 'delay 2')",
+      "Bash(osascript -e 'tell application \"Safari\" to do JavaScript \"document.title\" in front document')",
+      "Bash(pkill -f \"remote-debugging-port=9333\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --no-first-run --no-default-browser-check --remote-debugging-port=9333 --user-data-dir=/tmp/chrome-verify-profile about:blank)",
+      "Bash(curl -s http://localhost:9333/json/version)",
+      "Bash(node verify_contact_form.js)"
     ]
   }
 }

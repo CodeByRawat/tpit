@@ -19,8 +19,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
 
           {/* Brand */}
-          <div className="md:col-span-2">
-            <a href="#home" className="flex items-center gap-2.5 mb-5">
+          <div className="md:col-span-2 flex flex-col items-center md:items-start text-center md:text-left">
+            <a href="#home" className="flex items-center justify-center md:justify-start gap-2.5 mb-5">
               <div className="relative w-9 h-9">
                 <div className="w-9 h-9 rounded-full bg-white/20" />
                 <div className="absolute top-0 right-0 w-4 h-4 rounded-full bg-yellow border-2 border-navy" />
@@ -30,7 +30,7 @@ export default function Footer() {
             <p className="text-white/50 text-sm leading-relaxed max-w-xs mb-6">
               Helping financial companies connect with the right loan leads across Canada.
             </p>
-            <div className="flex gap-3">
+            <div className="flex justify-center md:justify-start gap-3">
               {SOCIALS.map(({ label, icon }) => (
                 <a
                   key={label}
@@ -45,7 +45,7 @@ export default function Footer() {
           </div>
 
           {/* Links */}
-          <div>
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-5">Quick Links</h4>
             <div className="flex flex-col gap-3">
               {NAV_LINKS.map(({ label, href }) => (
@@ -57,7 +57,7 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-5">Contact</h4>
             <div className="space-y-3">
               {[
@@ -74,7 +74,7 @@ export default function Footer() {
                   svg: <svg className="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-green-hero" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" /><circle cx="12" cy="9" r="2.5" /></svg>,
                 },
               ].map(({ svg, text }) => (
-                <p key={text} className="text-white/50 text-sm flex items-start gap-2">
+                <p key={text} className="text-white/50 text-sm flex items-center justify-center md:justify-start gap-2">
                   {svg}
                   {text}
                 </p>

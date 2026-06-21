@@ -51,7 +51,7 @@ export default function Testimonial() {
               </div>
 
               {/* Quote column */}
-              <div>
+              <div className="text-center md:text-left">
                 <blockquote className="text-xl md:text-2xl font-semibold text-white leading-relaxed mb-6">
                   &ldquo;Thanks to The Prime Infotech, we connected with serious homebuyers quickly and boosted our loan approvals significantly.&rdquo;
                 </blockquote>

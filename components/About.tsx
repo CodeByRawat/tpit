@@ -34,7 +34,7 @@ export default function About() {
           </FadeUp>
 
           {/* Text */}
-          <FadeUp delay={0.15}>
+          <FadeUp delay={0.15} className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <div className="tag-pill mb-4">About Us</div>
             <h2 className="text-4xl md:text-5xl font-black text-navy leading-tight mb-6">
               Who We Are
@@ -55,7 +55,7 @@ export default function About() {
               to connect you with consumers at the moment they&apos;re ready to talk. We focus on quality,
               transparency, and real-time delivery so your team spends less time chasing and more time closing.
             </p>
-            <div className="flex flex-wrap gap-3 mb-10">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-10">
               {PILLS.map((p) => (
                 <span key={p} className="bg-green-pale border border-green-light text-navy text-sm font-semibold px-4 py-2 rounded-full">
                   {p}

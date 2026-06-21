@@ -23,12 +23,13 @@ export default function Hero() {
       />
 
       {/* ── Mobile image — first on mobile ── */}
-      <div className="lg:hidden w-full pt-24" style={{ zIndex: 2 }}>
+      <div className="lg:hidden w-full overflow-hidden" style={{ paddingTop: '96px', zIndex: 2 }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/hero.png"
           alt="Loan advisor with services"
-          className="w-full object-contain select-none"
+          className="w-full select-none block"
+          style={{ marginBottom: '-18%' }}
           draggable={false}
         />
       </div>
@@ -49,11 +50,11 @@ export default function Hero() {
 
       {/* ── Text column ── */}
       <div
-        className="relative flex flex-col items-center lg:items-start justify-center text-center lg:text-left px-8 lg:pl-20 xl:pl-28 lg:pr-0 lg:w-[44%] min-h-screen pt-10 pb-16 lg:pt-28 lg:pb-12"
+        className="relative flex flex-col items-center lg:items-start justify-start lg:justify-center text-center lg:text-left px-8 lg:pl-20 xl:pl-28 lg:pr-0 lg:w-[44%] lg:min-h-screen pt-0 pb-16 lg:pt-28 lg:pb-12"
         style={{ zIndex: 3 }}
       >
         {/* Tag pill */}
-        <div className="inline-block bg-white/90 text-navy border border-white rounded-full px-4 py-1.5 text-xs font-bold tracking-widest uppercase mb-8">
+        <div className="block w-[54%] lg:inline-block lg:w-auto bg-white/90 text-navy border border-white rounded-full px-4 py-1.5 text-xs font-bold tracking-widest uppercase mb-8 text-center mx-auto lg:mx-0">
           Canada Loan Lead Experts
         </div>
 

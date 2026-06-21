@@ -31,12 +31,36 @@ const INFO_CARDS = [
   { Icon: PhoneIcon,    title: 'Phone',          line1: '+1 (647) 367-8348',        line2: 'Available weekdays' },
 ]
 
+const SHEET_WEBHOOK_URL = process.env.NEXT_PUBLIC_GOOGLE_SHEET_WEBHOOK_URL
+
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState('')
+  const [form, setForm] = useState({ name: '', email: '', phone: '' })
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault()
-    setSubmitted(true)
+    if (!SHEET_WEBHOOK_URL) {
+      setError('Form is not configured yet. Please contact us by email or phone.')
+      return
+    }
+
+    setSubmitting(true)
+    setError('')
+    try {
+      await fetch(SHEET_WEBHOOK_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(form),
+      })
+      setSubmitted(true)
+    } catch {
+      setError('Something went wrong. Please try again.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -54,8 +78,8 @@ export default function Contact() {
           {/* Form — white card, clean */}
           <FadeUp>
             <div className="bg-white rounded-4xl p-8 md:p-10 border border-green-light shadow-sm">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl flex items-center justify-center text-green-hero"
+              <div className="flex flex-col items-center text-center lg:flex-row lg:items-center lg:text-left gap-3 mb-6">
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center text-green-hero flex-shrink-0"
                      style={{ background: '#EDF5EC', border: '1px solid #A8C9A3' }}>
                   <FormIcon />
                 </div>
@@ -72,6 +96,8 @@ export default function Contact() {
                     <input
                       type="text"
                       placeholder="John Smith"
+                      value={form.name}
+                      onChange={(e) => setForm({ ...form, name: e.target.value })}
                       className="form-input w-full px-4 py-3.5 text-sm"
                     />
                   </div>
@@ -83,6 +109,8 @@ export default function Contact() {
                       type="email"
                       placeholder="john@company.com"
                       required
+                      value={form.email}
+                      onChange={(e) => setForm({ ...form, email: e.target.value })}
                       className="form-input w-full px-4 py-3.5 text-sm"
                     />
                   </div>
@@ -94,11 +122,14 @@ export default function Contact() {
                       type="tel"
                       placeholder="+1 (555) 000-0000"
                       required
+                      value={form.phone}
+                      onChange={(e) => setForm({ ...form, phone: e.target.value })}
                       className="form-input w-full px-4 py-3.5 text-sm"
                     />
                   </div>
-                  <button type="submit" className="btn-primary w-full py-4 text-base rounded-2xl mt-1">
-                    Get Loan Leads
+                  {error && <p className="text-red-600 text-sm">{error}</p>}
+                  <button type="submit" disabled={submitting} className="btn-primary w-full py-4 text-base rounded-2xl mt-1 disabled:opacity-60">
+                    {submitting ? 'Sending...' : 'Get Loan Leads'}
                   </button>
                 </form>
               ) : (
@@ -135,7 +166,7 @@ export default function Contact() {
               {INFO_CARDS.map(({ Icon, title, line1, line2 }) => (
                 <div
                   key={title}
-                  className="bg-white rounded-2xl p-4 border border-green-light"
+                  className="bg-white rounded-2xl p-4 border border-green-light flex flex-col items-center text-center"
                 >
                   <div className="w-9 h-9 rounded-xl flex items-center justify-center text-green-hero mb-3"
                        style={{ background: '#EDF5EC', border: '1px solid #A8C9A3' }}>
